@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+    <head>
+        <style>
+            #table{
+                border: 1px solid black;
+            }
+
+            #result{
+                font-size: 20px;
+                font-family: 'Courier New', Courier, monospace;
+            }
+        </style>
+
+    </head>
+    
+    <body>
+        <h1 align="center">TIP CALCULATOR</h1>
+        <br>
+        <br>
+        <table id="table" align="center">
+            <tr>
+                <td>ENTER AMOUNT</td>
+                <td><input id="tip" type="number"></td>
+            </tr>
+            <tr>
+                <td>TIP%</td>
+                <td><input id="tipp" type="number"> </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="3"><button onclick="fun()">CALCULATE TOTAL</button></td>
+            </tr>
+        </table>
+
+        <p align="center" id="result">
+
+        </p>
+
+        <script>
+            function fun(){
+            var x=document.getElementById("tip").value;
+            var y=document.getElementById("tipp").value;
+            
+            var res=(+x)*(+y)/100;
+            var a=(+x)+(+res);
+            document.getElementById("result").innerHTML=a;
+            }
+           
+        </script>
+    </body>
+</html>
+
